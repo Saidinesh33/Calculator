@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="calculator">
+        <div class="top-bar">
+            <h2>🧮 Scientific Calc</h2>
+            <button id="themeToggle">🌙</button>
+        </div>
+
+        <input type="text" id="screen" disabled>
+
+        <div class="buttons">
+            <button onclick="clearScreen()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="append('%')">%</button>
+            <button onclick="append('/')">/</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('*')">*</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('-')">-</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            <button onclick="append('+')">+</button>
+
+            <button onclick="append('0')">0</button>
+            <button onclick="append('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <button onclick="scientific('sin')">sin</button>
+            <button onclick="scientific('cos')">cos</button>
+            <button onclick="scientific('tan')">tan</button>
+            <button onclick="scientific('sqrt')">√</button>
+
+            <button onclick="scientific('log')">log</button>
+            <button onclick="append('**')">x²</button>
+        </div>
+    </div>
+
+    <div class="history">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
